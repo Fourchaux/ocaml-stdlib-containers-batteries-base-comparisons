@@ -1,0 +1,20 @@
+                                                             Stdlib	(* Containers - empty *)	                                                                                 Batteries	                                                                                                         Base
+Printf.bprintf : Buffer.t -> ('a, Buffer.t, unit) format -> 'a		BatPrintf.bprintf : Buffer.t -> ('a, Buffer.t, unit) BatPrintf.t -> 'a	Base.Printf.bprintf : Base.Import0.Caml.Buffer.t -> ('r, Base.Import0.Caml.Buffer.t, unit) format -> 'r
+		BatPrintf.bprintf2 : Buffer.t -> ('b, 'a BatInnerIO.output, unit) BatPrintf.t -> 'b	
+Printf.eprintf : ('a, out_channel, unit) format -> 'a		BatPrintf.eprintf : ('b, 'a BatInnerIO.output, unit) BatPrintf.t -> 'b	(* Base.Printf.eprintf  *)
+			Base.Printf.failwithf : ('r, unit, string, unit -> 'a) format4 -> 'r
+Printf.fprintf : out_channel -> ('a, out_channel, unit) format -> 'a		BatPrintf.fprintf : 'a BatInnerIO.output -> ('b, 'a BatInnerIO.output, unit) BatPrintf.t -> 'b	(* Base.Printf.fprintf  *)
+Printf.ibprintf : Buffer.t -> ('a, Buffer.t, unit) format -> 'a			(* Base.Printf.ibprintf  *)
+Printf.ifprintf : 'b -> ('a, 'b, 'c, unit) format4 -> 'a		BatPrintf.ifprintf : 'c -> ('b, 'a BatInnerIO.output, unit) BatPrintf.t -> 'b	Base.Printf.ifprintf : 'a -> ('r, 'a, 'c, unit) format4 -> 'r
+Printf.ikbprintf : (Buffer.t -> 'd) -> Buffer.t -> ('a, Buffer.t, unit, 'd) format4 -> 'a			(* Base.Printf.ikbprintf  *)
+Printf.ikfprintf : ('b -> 'd) -> 'b -> ('a, 'b, 'c, 'd) format4 -> 'a			(* Base.Printf.ikfprintf  *)
+			Base.Printf.invalid_argf : ('r, unit, string, unit -> 'a) format4 -> 'r
+Printf.kbprintf : (Buffer.t -> 'd) -> Buffer.t -> ('a, Buffer.t, unit, 'd) format4 -> 'a		BatPrintf.kbprintf : (Buffer.t -> 'a) -> Buffer.t -> ('b, Buffer.t, unit, 'a) format4 -> 'b	Base.Printf.kbprintf : (Base.Import0.Caml.Buffer.t -> 'a) -> Base.Import0.Caml.Buffer.t -> ('r, Base.Import0.Caml.Buffer.t, unit, 'a) format4 -> 'r
+		BatPrintf.kbprintf2 : (Buffer.t -> 'b) -> Buffer.t -> ('c, 'a BatInnerIO.output, unit, 'b) format4 -> 'c	
+Printf.kfprintf : (out_channel -> 'd) -> out_channel -> ('a, out_channel, unit, 'd) format4 -> 'a		BatPrintf.kfprintf : ('a BatInnerIO.output -> 'b) -> 'a BatInnerIO.output -> ('c, 'a BatInnerIO.output, unit, 'b) format4 -> 'c	(* Base.Printf.kfprintf  *)
+Printf.kprintf : (string -> 'b) -> ('a, unit, string, 'b) format4 -> 'a		BatPrintf.kprintf : (string -> 'a) -> ('b, unit, string, 'a) format4 -> 'b	(* Base.Printf.kprintf  *)
+Printf.ksprintf : (string -> 'd) -> ('a, unit, string, 'd) format4 -> 'a		BatPrintf.ksprintf : (string -> 'a) -> ('b, unit, string, 'a) format4 -> 'b	Base.Printf.ksprintf : (string -> 'a) -> ('r, unit, string, 'a) format4 -> 'r
+		BatPrintf.ksprintf2 : (string -> 'b) -> ('c, 'a BatInnerIO.output, unit, 'b) format4 -> 'c	
+Printf.printf : ('a, out_channel, unit) format -> 'a		BatPrintf.printf : ('b, 'a BatInnerIO.output, unit) BatPrintf.t -> 'b	(* Base.Printf.printf  *)
+Printf.sprintf : ('a, unit, string) format -> 'a		BatPrintf.sprintf : ('a, unit, string) BatPrintf.t -> 'a	Base.Printf.sprintf : ('r, unit, string) format -> 'r
+		BatPrintf.sprintf2 : ('a, 'b BatInnerIO.output, unit, string) format4 -> 'a	
