@@ -177,14 +177,15 @@ StringLabels.set : bytes -> int -> char -> unit	CCStringLabels.set : string -> i
 			Base.String.sexp_of_t : string -> Sexplib0__.Sexp.t
 		BatString.slice : ?first:int -> ?last:int -> string -> string	
 		BatString.splice : string -> int -> int -> string -> string	
-	CCStringLabels.split : by:string -> string -> string list	BatString.split : string -> by:string -> string * string	
-	CCStringLabels.split_on_char : by:char -> string -> string list	BatString.split_on_char : char -> string -> string list	Base.String.split : string -> on:char -> string list
-StringLabels.split_on_char : sep:char -> string -> string list			Base.String.split_lines : string -> string list
-		BatString.split_on_string : by:string -> string -> string list	Base.String.split_on_chars : string -> on:char list -> string list
+	CCStringLabels.split : by:string -> string -> string list		
+		BatString.split : string -> by:string -> string * string	
+StringLabels.split_on_char : sep:char -> string -> string list	CCStringLabels.split_on_char : by:char -> string -> string list	BatString.split_on_char : char -> string -> string list	Base.String.split : string -> on:char -> string list
+			Base.String.split_lines : string -> string list
+			Base.String.split_on_chars : string -> on:char list -> string list
+		BatString.split_on_string : by:string -> string -> string list	
 		BatString.starts_with : string -> string -> bool	
-		BatString.strip : ?chars:string -> string -> string	
-	CCStringLabels.sub : string -> pos:int -> len:int -> string	BatString.sub : string -> int -> int -> string	Base.String.strip : ?drop:(char -> bool) -> string -> string
-StringLabels.sub : string -> pos:int -> len:int -> string			Base.String.sub : (string, string) Base.Blit.sub
+		BatString.strip : ?chars:string -> string -> string	Base.String.strip : ?drop:(char -> bool) -> string -> string
+StringLabels.sub : string -> pos:int -> len:int -> string	CCStringLabels.sub : string -> pos:int -> len:int -> string	BatString.sub : string -> int -> int -> string	Base.String.sub : (string, string) Base.Blit.sub
 			Base.String.subo : (string, string) Base.Blit.subo
 			Base.String.substr_index : ?pos:int -> string -> pattern:string -> int option
 			Base.String.substr_index_all : string -> may_overlap:bool -> pattern:string -> int list

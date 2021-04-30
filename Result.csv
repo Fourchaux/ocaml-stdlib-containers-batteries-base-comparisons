@@ -65,7 +65,9 @@ Result.map_error : ('e -> 'f) -> ('a, 'e) result -> ('a, 'f) result	CCResult.map
 	CCResult.of_err : ('a, 'b) CCResult.error -> ('a, 'b) result		
 	CCResult.of_exn : exn -> ('a, string) result		
 	CCResult.of_exn_trace : exn -> ('a, string) result		
-	CCResult.of_opt : 'a option -> ('a, string) result	BatResult.of_option : 'a option -> ('a, unit) result	Base.Result.of_option : 'ok option -> error:'err -> ('ok, 'err) result
+	CCResult.of_opt : 'a option -> ('a, string) result		
+		BatResult.of_option : 'a option -> ('a, unit) result	
+			Base.Result.of_option : 'ok option -> error:'err -> ('ok, 'err) result
 Result.ok : 'a -> ('a, 'e) result		BatResult.ok : 'a -> ('a, 'b) result	
 			Base.Result.ok_exn : ('ok, exn) result-> 'ok
 			Base.Result.ok : ('ok, 'a) result-> 'ok option
