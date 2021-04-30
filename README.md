@@ -1,5 +1,5 @@
 # Core functions comparison
-Comparisons of the main functions (with their signatures) used in the:
+Comparisons of the main functions (with their simplified signatures) used in the:
 - Array / ArrayLabels
 - List / ListLabels
 - Map
